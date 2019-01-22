@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "604083412449",
+    "firebase_url": "https://dit-plome.firebaseio.com",
+    "project_id": "dit-plome",
+    "storage_bucket": "dit-plome.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604083412449:android:14c6ed1b3adc1384",
+        "android_client_info": {
+          "package_name": "com.example.ditplme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604083412449-3tuugi7si2qfg6b65i5pk1dns77h6lhn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ditplme",
+            "certificate_hash": "b13cc1d68fa822981fb54e285388e5a88dea2b79"
+          }
+        },
+        {
+          "client_id": "604083412449-62gvml6khagtdunui825tr1rdjgaouqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr1nwJVK5lYuuerepF851Ny7xqgEU0BAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604083412449-62gvml6khagtdunui825tr1rdjgaouqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
