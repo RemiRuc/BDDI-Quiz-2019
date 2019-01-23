@@ -10,7 +10,7 @@ public class CategorySelection extends AppCompatActivity {
 
     Button developerBtn, graphistBtn;
 
-    public static String selectedCategory = "";
+    public static int selectedCategory = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,9 @@ public class CategorySelection extends AppCompatActivity {
         developerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectedCategory = "dev";
+                selectedCategory = 0;
                 Intent intent = new Intent(CategorySelection.this, MainActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("selectedCategory", selectedCategory);
-                intent.putExtras(bundle);
+                intent.putExtra("CATEGORY", selectedCategory);
                 startActivity(intent);
             }
         });
@@ -35,8 +33,10 @@ public class CategorySelection extends AppCompatActivity {
         graphistBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectedCategory = "graph";
-                startActivity(new Intent(CategorySelection.this, MainActivity.class));
+                selectedCategory = 1;
+                Intent intent = new Intent(CategorySelection.this, MainActivity.class);
+                intent.putExtra("CATEGORY", selectedCategory);
+                startActivity(intent);
             }
         });
     }

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     Random r;
 
-    private String selectedCategory;
+    private int selectedCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +48,13 @@ public class MainActivity extends AppCompatActivity {
         score.setText("Score: " + mScore);
 
         Bundle bundle = getIntent().getExtras();
-        selectedCategory = bundle.getString("edittext");
+        selectedCategory = bundle.getInt("CATEGORY");
 
-        if (selectedCategory == "dev"){
+        score.setText("Score: " + selectedCategory);
+
+        if (selectedCategory == 0){
             updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-        } else if (selectedCategory == "graph") {
+        } else if (selectedCategory == 1) {
             updateCurrentQuestion(r.nextInt(mQuestionLength));
         }
 
@@ -64,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateCurrentQuestion(r.nextInt(mQuestionLength));
-                    if (selectedCategory == "dev"){
+                    if (selectedCategory == 0){
                         updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == "graph") {
+                    } else if (selectedCategory == 1) {
                         updateCurrentQuestion(r.nextInt(mQuestionLength));
                     }
                 } else {
@@ -81,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
                 if (answer2.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    if (selectedCategory == "dev"){
+                    if (selectedCategory == 0){
                         updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == "graph") {
+                    } else if (selectedCategory == 1) {
                         updateCurrentQuestion(r.nextInt(mQuestionLength));
                     }
                 } else {
@@ -98,9 +100,9 @@ public class MainActivity extends AppCompatActivity {
                 if (answer3.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    if (selectedCategory == "dev"){
+                    if (selectedCategory == 0){
                         updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == "graph") {
+                    } else if (selectedCategory == 1) {
                         updateCurrentQuestion(r.nextInt(mQuestionLength));
                     }
                 } else {
@@ -115,9 +117,9 @@ public class MainActivity extends AppCompatActivity {
                 if (answer4.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    if (selectedCategory == "dev"){
+                    if (selectedCategory == 0){
                         updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == "graph") {
+                    } else if (selectedCategory == 1) {
                         updateCurrentQuestion(r.nextInt(mQuestionLength));
                     }
                 } else {
