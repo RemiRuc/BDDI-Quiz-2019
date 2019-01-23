@@ -23,7 +23,11 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".CategorySelection"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".score"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -158,7 +158,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gameisover(){
-        AlertDialog.Builder alertDialogbuilder = new AlertDialog.Builder(MainActivity.this);
+
+
+        /**AlertDialog.Builder alertDialogbuilder = new AlertDialog.Builder(MainActivity.this);
         alertDialogbuilder
                 .setMessage("Your game is over " + mScore + "score")
                 .setPositiveButton("Start New Game", new DialogInterface.OnClickListener() {
@@ -175,6 +177,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         AlertDialog alertDialog = alertDialogbuilder.create();
-        alertDialog.show();
+        alertDialog.show();**/
     }
 }
