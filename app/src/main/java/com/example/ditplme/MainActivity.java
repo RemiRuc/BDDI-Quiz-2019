@@ -18,12 +18,17 @@ public class MainActivity extends AppCompatActivity {
     TextView score, question;
 
     private Question mQuestion = new Question();
+    private QuestionsDev questionsDev = new QuestionsDev();
 
     private String mAnswer;
     private int mScore = 0;
+
     private int mQuestionLength = mQuestion.Questions.length;
+    private int QuestionsDevLength = questionsDev.Questions.length;
 
     Random r;
+
+    private String selectedCategory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         score.setText("Score: " + mScore);
 
-        updateCurrentQuestion(r.nextInt(mQuestionLength));
+        Bundle bundle = getIntent().getExtras();
+        selectedCategory = bundle.getString("edittext");
+
+        if (selectedCategory == "dev"){
+            updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
+        } else if (selectedCategory == "graph") {
+            updateCurrentQuestion(r.nextInt(mQuestionLength));
+        }
 
 
         answer1.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    if (selectedCategory == "dev"){
+                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
+                    } else if (selectedCategory == "graph") {
+                        updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    }
                 } else {
                     gameisover();
                 }
@@ -64,7 +81,11 @@ public class MainActivity extends AppCompatActivity {
                 if (answer2.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    if (selectedCategory == "dev"){
+                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
+                    } else if (selectedCategory == "graph") {
+                        updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    }
                 } else {
                     gameisover();
                 }
@@ -77,7 +98,11 @@ public class MainActivity extends AppCompatActivity {
                 if (answer3.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    if (selectedCategory == "dev"){
+                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
+                    } else if (selectedCategory == "graph") {
+                        updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    }
                 } else {
                     gameisover();
                 }
@@ -90,7 +115,11 @@ public class MainActivity extends AppCompatActivity {
                 if (answer4.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    if (selectedCategory == "dev"){
+                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
+                    } else if (selectedCategory == "graph") {
+                        updateCurrentQuestion(r.nextInt(mQuestionLength));
+                    }
                 } else {
                     gameisover();
                 }
@@ -107,6 +136,17 @@ public class MainActivity extends AppCompatActivity {
         answer4.setText(mQuestion.getChoice4(i));
 
         mAnswer = mQuestion.getCorrectAnswer(i);
+    }
+
+    private void updateCurrentQuestionDev(int i) {
+        question.setText(questionsDev.getQuestion(i));
+
+        answer1.setText(questionsDev.getChoice(i));
+        answer2.setText(questionsDev.getChoice2(i));
+        answer3.setText(questionsDev.getChoice3(i));
+        answer4.setText(questionsDev.getChoice4(i));
+
+        mAnswer = questionsDev.getCorrectAnswer(i);
     }
 
     private void gameisover(){
