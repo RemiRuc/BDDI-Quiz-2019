@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategorySelection">
+    tools:context=".CategorySelection"
+    android:background="@color/colorPrimary">
 
-    <Button
-        android:id="@+id/developer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="246dp" />
+    <ImageView
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/topbar" />
 
-    <Button
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="54dp"
+        android:layout_height="79dp"
+        android:layout_above="@id/intro"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"
+        android:layout_margin="5dp"/>
+
+    <ImageView
         android:id="@+id/graphist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/developpeur"
+        android:layout_below="@id/topbar"/>
+
+    <ImageView
+        android:id="@+id/developer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/designer"
         android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="411dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_below="@id/graphist"/>
+</RelativeLayout>
