@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         score.setText("Score: " + mScore);
 
-        updateCurrentQuestion(r.nextInt());
+        updateCurrentQuestion(r.nextInt(mQuestionLength));
 
 
         answer1.setOnClickListener(new View.OnClickListener() {
@@ -101,10 +101,10 @@ public class MainActivity extends AppCompatActivity {
     private void updateCurrentQuestion(int i) {
         question.setText(mQuestion.getQuestion(i));
 
-        question.setText(mQuestion.getChoice(i));
-        question.setText(mQuestion.getChoice2(i));
-        question.setText(mQuestion.getChoice3(i));
-        question.setText(mQuestion.getChoice4(i));
+        answer1.setText(mQuestion.getChoice(i));
+        answer2.setText(mQuestion.getChoice2(i));
+        answer3.setText(mQuestion.getChoice3(i));
+        answer4.setText(mQuestion.getChoice4(i));
 
         mAnswer = mQuestion.getCorrectAnswer(i);
     }
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     private void gameisover(){
         AlertDialog.Builder alertDialogbuilder = new AlertDialog.Builder(MainActivity.this);
         alertDialogbuilder
-                .setMessage("Yout game is over " + mScore + "score")
+                .setMessage("Your game is over " + mScore + "score")
                 .setPositiveButton("Start New Game", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
