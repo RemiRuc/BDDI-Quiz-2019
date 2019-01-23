@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Dit \"Plôme\" ?</string>
+    <string name="app_name">BDDI QUIZ</string>
+
+    <string name="intro">Tu es en Bachelor Designer Développeur Intéractif et tu aimerais savoir si tu vas obtenir ton diplôme ?
+        Réponds à ces 10 questions et tu aura ta réponse !</string>
+    <string name="text_field">Ton prénom</string>
+    <string name="buttonOne">Valider</string>
 </resources>
