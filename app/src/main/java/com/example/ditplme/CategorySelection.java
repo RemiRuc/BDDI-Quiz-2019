@@ -5,10 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class CategorySelection extends AppCompatActivity {
 
-    Button developerBtn, graphistBtn;
+    ImageView developerBtn, graphistBtn;
 
     public static int selectedCategory = -1;
 
@@ -17,8 +18,8 @@ public class CategorySelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_selection);
 
-        developerBtn = (Button) findViewById(R.id.developer);
-        graphistBtn = (Button) findViewById(R.id.graphist);
+        developerBtn = (ImageView) findViewById(R.id.developer);
+        graphistBtn = (ImageView) findViewById(R.id.graphist);
 
         developerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
