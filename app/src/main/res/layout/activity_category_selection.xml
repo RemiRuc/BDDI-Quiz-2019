@@ -10,16 +10,18 @@
     <ImageView
         android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/topbar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="65dp"
-        android:layout_height="76dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_above="@id/intro"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
