@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
     private int mQuestionLength = mQuestion.Questions.length;
     private int QuestionsDevLength = questionsDev.Questions.length;
 
+    private int thisQuestionsLength;
+    private int actualQuestion = 0;
+
     Random r;
 
     private int selectedCategory;
@@ -50,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         selectedCategory = bundle.getInt("CATEGORY");
 
-        score.setText("Score: " + selectedCategory);
-
         if (selectedCategory == 0){
-            updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
+            thisQuestionsLength = QuestionsDevLength;
+            updateCurrentQuestionDev(actualQuestion);
         } else if (selectedCategory == 1) {
-            updateCurrentQuestion(r.nextInt(mQuestionLength));
+            thisQuestionsLength = mQuestionLength;
+            updateCurrentQuestion(actualQuestion);
         }
 
 
@@ -65,14 +68,14 @@ public class MainActivity extends AppCompatActivity {
                 if (answer1.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    updateCurrentQuestion(r.nextInt(mQuestionLength));
-                    if (selectedCategory == 0){
-                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == 1) {
-                        updateCurrentQuestion(r.nextInt(mQuestionLength));
-                    }
-                } else {
+                }
+                actualQuestion++;
+                if (actualQuestion == thisQuestionsLength) {
                     gameisover();
+                } else if (selectedCategory == 0){
+                    updateCurrentQuestionDev(actualQuestion);
+                } else if (selectedCategory == 1) {
+                    updateCurrentQuestion(actualQuestion);
                 }
             }
         });
@@ -83,13 +86,14 @@ public class MainActivity extends AppCompatActivity {
                 if (answer2.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    if (selectedCategory == 0){
-                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == 1) {
-                        updateCurrentQuestion(r.nextInt(mQuestionLength));
-                    }
-                } else {
+                }
+                actualQuestion++;
+                if (actualQuestion == thisQuestionsLength) {
                     gameisover();
+                } else if (selectedCategory == 0){
+                    updateCurrentQuestionDev(actualQuestion);
+                } else if (selectedCategory == 1) {
+                    updateCurrentQuestion(actualQuestion);
                 }
             }
         });
@@ -100,13 +104,14 @@ public class MainActivity extends AppCompatActivity {
                 if (answer3.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    if (selectedCategory == 0){
-                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == 1) {
-                        updateCurrentQuestion(r.nextInt(mQuestionLength));
-                    }
-                } else {
+                }
+                actualQuestion++;
+                if (actualQuestion == thisQuestionsLength) {
                     gameisover();
+                } else if (selectedCategory == 0){
+                    updateCurrentQuestionDev(actualQuestion);
+                } else if (selectedCategory == 1) {
+                    updateCurrentQuestion(actualQuestion);
                 }
             }
         });
@@ -117,13 +122,14 @@ public class MainActivity extends AppCompatActivity {
                 if (answer4.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
-                    if (selectedCategory == 0){
-                        updateCurrentQuestionDev(r.nextInt(QuestionsDevLength));
-                    } else if (selectedCategory == 1) {
-                        updateCurrentQuestion(r.nextInt(mQuestionLength));
-                    }
-                } else {
+                }
+                actualQuestion++;
+                if (actualQuestion == thisQuestionsLength) {
                     gameisover();
+                } else if (selectedCategory == 0){
+                    updateCurrentQuestionDev(actualQuestion);
+                } else if (selectedCategory == 1) {
+                    updateCurrentQuestion(actualQuestion);
                 }
             }
         });
