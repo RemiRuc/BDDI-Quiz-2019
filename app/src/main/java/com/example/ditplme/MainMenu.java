@@ -13,7 +13,7 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        Button startquiz = (Button) findViewById(R.id.startQuiz);
+        Button startquiz = (Button) findViewById(R.id.next_button);
         startquiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
