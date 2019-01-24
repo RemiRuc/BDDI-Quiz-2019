@@ -3,30 +3,30 @@ package com.example.ditplme;
 public class QuestionsDev {
 
     public String[] Questions = {
-            "What is the first number in numbers?",
-            "What is the second number in numbers?",
-            "What is the third number in numbers?",
-            "What is the four number in numbers?",
-            "What is the five number in numbers?",
-            "What is the six number in numbers?",
-            "What is the seven number in numbers?",
-            "What is the eight number in numbers?",
+            "Quel a été ton cours préféré ?",
+            "Quelle techno maîtrise-tu le plus ?",
+            "Pour faire de la 3D, tu préfére utiliser...",
+            "A quoi sert la carte blanche au Uno ?",
+            "Parmi ces 4 propositions, qui n'est pas développeur ?",
+            "Combien coûte un poulet Franprix ?",
+            "Quelle est l'une des conditions pour passer au niveau supérieur de rémunération ?",
+            "Combien es-tu prêt à payer Thierry pour obtenir ton diplôme ?",
     };
 
     private String mChoice[][] = {
 
-            {"0","1","2","3"},
-            {"0","13","23","3"},
-            {"0","1","24","3"},
-            {"0","12","243","3"},
-            {"0","13","26","3"},
-            {"0","145","42","3"},
-            {"0","14","23","3"},
-            {"0","1","2","3"},
+            {"Swift","Les jeudis matins","Symfony","Les soirées au bar"},
+            {"Jquery","Flash","Objective C","WordPress"},
+            {"Three JS","Babylon JS","Remy 3D","Des legos"},
+            {"À rien","À faire chier deux autres personnes","À trouver son chemin","Je ne sais pas jouer au Uno"},
+            {"Remi","Remy","Remy","Remy"},
+            {"8,90 Francs","25,582 Francs","Je préfére le McDo","Demandez à Damien"},
+            {"Avoir plus de 21 ans","Être développeur","Ne pas payer la CVEC","S'appeler Mathias"},
+            {"Entre 0 et 3 centimes","1","2","3"},
     };
 
     private String mCorrectAnswer[] = {
-            "0","13","3","243","0","145","14","3"
+            "Symfony","Objective C","Three JS","Je ne sais pas jouer au Uno","Remy","25,582 Francs","Avoir plus de 21 ans","3"
     };
 
     public String getQuestion(int a) {

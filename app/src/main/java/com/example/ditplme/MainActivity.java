@@ -159,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void gameisover(){
 
+        startActivity(new Intent(MainActivity.this, score.class));
 
         /**AlertDialog.Builder alertDialogbuilder = new AlertDialog.Builder(MainActivity.this);
         alertDialogbuilder
