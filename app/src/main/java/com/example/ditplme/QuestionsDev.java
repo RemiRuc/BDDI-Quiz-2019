@@ -22,11 +22,11 @@ public class QuestionsDev {
             {"Remi","Remy","Remy","Remy"},
             {"8,90 Francs","25,582 Francs","Je préfére le McDo","Demandez à Damien"},
             {"Avoir plus de 21 ans","Être développeur","Ne pas payer la CVEC","S'appeler Mathias"},
-            {"Entre 0 et 3 centimes","1","2","3"},
+            {"Entre 0 et 3 centimes","Je préfére travailler dur","J'ai déjà payé la CVEC","On ne paie pas Tyty"},
     };
 
     private String mCorrectAnswer[] = {
-            "Symfony","Objective C","Three JS","Je ne sais pas jouer au Uno","Remy","25,582 Francs","Avoir plus de 21 ans","3"
+            "Symfony","Objective C","Three JS","Je ne sais pas jouer au Uno","Remy","25,582 Francs","Avoir plus de 21 ans","Je préfére travailler dur"
     };
 
     public String getQuestion(int a) {

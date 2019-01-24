@@ -4,5 +4,6 @@
     <string name="intro">Tu es en Bachelor Designer Développeur Intéractif et tu aimerais savoir si tu vas obtenir ton diplôme ?
         Réponds à ces 10 questions et tu aura ta réponse !</string>
     <string name="text_field">Ton prénom</string>
+    <string name="text_fieldMail">Ton adresse mail</string>
     <string name="buttonOne">Valider</string>
 </resources>

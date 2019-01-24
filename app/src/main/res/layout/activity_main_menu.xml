@@ -43,8 +43,24 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="20dp"
         android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dip"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/fieldMail"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/field"
+        android:background="#dfe4ea"
+        android:hint="@string/text_fieldMail"
+        android:inputType="textMultiLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:drawableLeft="@drawable/mail"
         android:drawablePadding="10dip"
         android:padding="10dp"/>
 
@@ -56,7 +72,7 @@
         android:background="#00a0ff"
         android:textColor="@color/colorWhite"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/field"
+        android:layout_below="@id/fieldMail"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"/>
 
