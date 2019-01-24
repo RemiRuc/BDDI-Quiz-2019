@@ -115,6 +115,8 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
