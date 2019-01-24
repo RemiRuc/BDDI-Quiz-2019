@@ -30,7 +30,7 @@ public class score extends AppCompatActivity {
             commentaire.setText("phrase 1");
         } if (recupResultat > 3 && recupResultat <= 5) {
             commentaire = (TextView) findViewById(R.id.commentaire);
-            commentaire.setText("phrase 2");
+            commentaire.setText("Après avoir évalué tes réponses, nous sommes dans le regret de t’annoncer que tu n’es pas en mesure d’obtenir ton diplôme.\n Cependant, nous pensons que tu es fait pour exercer le métier de boulanger...");
         } if (recupResultat > 5 && recupResultat <= 7) {
             commentaire = (TextView) findViewById(R.id.commentaire);
             commentaire.setText("phrase 3");

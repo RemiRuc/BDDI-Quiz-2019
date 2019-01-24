@@ -20,5 +20,7 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(new Intent(MainMenu.this, CategorySelection.class));
             }
         });
+
+
     }
 }
