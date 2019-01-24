@@ -11,7 +11,7 @@ public class score extends AppCompatActivity {
 
     public static int recupResultat;
 
-    TextView note;
+    TextView note, commentaire;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,5 +24,20 @@ public class score extends AppCompatActivity {
         recupResultat = bundle.getInt("RESULTAT");
 
         note.setText(Integer.toString(recupResultat) + "/10");
+
+        if (recupResultat <= 3) {
+            commentaire = (TextView) findViewById(R.id.commentaire);
+            commentaire.setText("phrase 1");
+        } if (recupResultat > 3 && recupResultat <= 5) {
+            commentaire = (TextView) findViewById(R.id.commentaire);
+            commentaire.setText("phrase 2");
+        } if (recupResultat > 5 && recupResultat <= 7) {
+            commentaire = (TextView) findViewById(R.id.commentaire);
+            commentaire.setText("phrase 3");
+        } if (recupResultat > 7) {
+            commentaire = (TextView) findViewById(R.id.commentaire);
+            commentaire.setText("phrase 4");
+        }
+
     }
 }
