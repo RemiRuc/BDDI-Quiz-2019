@@ -3,6 +3,8 @@ package com.example.ditplme;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.example.ditplme.retro.ApiUtil;
 
@@ -15,6 +17,11 @@ import retrofit2.Response;
 public class ScoreList extends AppCompatActivity {
 
     private final String TAG = ScoreList.class.getSimpleName();
+
+    ListView mListView;
+
+    private String[] pseudos;
+    private int[] scores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,22 @@ public class ScoreList extends AppCompatActivity {
                 if(response.isSuccessful()){
                     List<Player> postList = response.body();
                     Log.d(TAG, "LISTT : "+response.body());
+
+                    for(int i = 0; i < response.body().size()  ; i++) {
+
+                        pseudos[i] = response.body().get(i).getPseudo();
+                        scores[i] = response.body().get(i).getScore();
+                    }
+
+
+                    mListView = (ListView) findViewById(R.id.listview);
+
+                    //android.R.layout.simple_list_item_1 est une vue disponible de base dans le SDK android,
+                    //Contenant une TextView avec comme identifiant "@android:id/text1"
+
+                    final ArrayAdapter<String> adapter = new ArrayAdapter<String>(ScoreList.this,
+                            android.R.layout.simple_list_item_1, pseudos);
+                    mListView.setAdapter(adapter);
                 }else{
                     Log.d(TAG, "LISTT : "+response.code());
                 }
