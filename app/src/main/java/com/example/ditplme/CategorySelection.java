@@ -14,6 +14,8 @@ public class CategorySelection extends AppCompatActivity {
 
     ImageView developerBtn, graphistBtn;
 
+    SharedPreferences sharedCategory;
+
     public static int selectedCategory = -1;
 
     @Override
@@ -32,6 +34,12 @@ public class CategorySelection extends AppCompatActivity {
                 Intent intent = new Intent(CategorySelection.this, MainActivity.class);
                 intent.putExtra("CATEGORY", selectedCategory);
                 startActivity(intent);
+
+                sharedCategory = getBaseContext().getSharedPreferences("PREFS_CATEGORY", MODE_PRIVATE);
+                sharedCategory
+                        .edit()
+                        .putString("PREFS_CAT", String.valueOf(selectedCategory))
+                        .apply();
             }
         });
 
@@ -42,6 +50,12 @@ public class CategorySelection extends AppCompatActivity {
                 Intent intent = new Intent(CategorySelection.this, MainActivity.class);
                 intent.putExtra("CATEGORY", selectedCategory);
                 startActivity(intent);
+
+                sharedCategory = getBaseContext().getSharedPreferences("PREFS_CATEGORY", MODE_PRIVATE);
+                sharedCategory
+                        .edit()
+                        .putString("PREFS_CAT", String.valueOf(selectedCategory))
+                        .apply();
             }
         });
     }

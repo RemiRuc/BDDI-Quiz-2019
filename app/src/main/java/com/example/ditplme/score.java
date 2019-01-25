@@ -12,8 +12,9 @@ public class score extends AppCompatActivity {
 
     public static int recupResultat;
     SharedPreferences sharedPreferences;
+    SharedPreferences sharedCategory;
 
-    TextView note, commentaire, testname, testMail;
+    TextView note, commentaire, nameUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +22,15 @@ public class score extends AppCompatActivity {
         setContentView(R.layout.activity_score);
 
         sharedPreferences = getBaseContext().getSharedPreferences("PREFS", MODE_PRIVATE);
+        sharedCategory = getBaseContext().getSharedPreferences("PREFS_CATEGORY", MODE_PRIVATE);
         String name = sharedPreferences.getString("PREFS_NAME", "inconnu");
         String mail = sharedPreferences.getString("PREFS_MAIL",null);
+        String category = sharedCategory.getString("PREFS_CAT",null);
 
-        testname = (TextView) findViewById(R.id.testName);
-        testMail = (TextView) findViewById(R.id.testMail);
+        nameUser = (TextView) findViewById(R.id.nameUser);
+        nameUser.setText(name);
 
-        testname.setText(name);
-        testMail.setText(mail);
+
 
 
         note = (TextView) findViewById(R.id.note);
