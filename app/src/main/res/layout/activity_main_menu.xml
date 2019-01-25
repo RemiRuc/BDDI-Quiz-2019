@@ -20,6 +20,7 @@
         android:layout_height="169dp"
         android:layout_above="@id/intro"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logo3" />
 
@@ -30,7 +31,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_margin="40dp"/>
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+        android:id="@+id/alert"
+        android:textColor="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
 
     <EditText
         android:id="@+id/field"
@@ -46,6 +58,7 @@
         android:layout_marginBottom="20dp"
         android:drawableLeft="@drawable/user"
         android:drawablePadding="10dip"
+        android:layout_marginTop="40dp"
         android:padding="10dp"/>
 
     <EditText

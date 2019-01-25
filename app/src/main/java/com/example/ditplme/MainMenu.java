@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainMenu extends AppCompatActivity {
 
@@ -22,18 +23,24 @@ public class MainMenu extends AppCompatActivity {
         startquiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 EditText name = findViewById(R.id.field);
                 EditText mail = findViewById(R.id.fieldMail);
+                TextView alert = findViewById(R.id.alert);
 
-                sharedPreferences = getBaseContext().getSharedPreferences("PREFS", MODE_PRIVATE);
-                sharedPreferences
-                        .edit()
-                        .putString("PREFS_NAME", String.valueOf(name.getText()))
-                        .putString("PREFS_MAIL", String.valueOf(mail.getText()))
-                        .apply();
+                if (name.getText().toString().trim().equals("") || mail.getText().toString().trim().equals("")) {
+                    alert.setText("Veuillez remplir tous les champs");
+                } else {
+                    sharedPreferences = getBaseContext().getSharedPreferences("PREFS", MODE_PRIVATE);
+                    sharedPreferences
+                            .edit()
+                            .putString("PREFS_NAME", String.valueOf(name.getText()))
+                            .putString("PREFS_MAIL", String.valueOf(mail.getText()))
+                            .apply();
 
-                Intent intent = new Intent(MainMenu.this, CategorySelection.class);
-                startActivity(intent);
+                    Intent intent = new Intent(MainMenu.this, CategorySelection.class);
+                    startActivity(intent);
+                }
             }
         });
 
