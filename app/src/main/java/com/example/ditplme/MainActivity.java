@@ -70,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
                     score.setText("Score: " + mScore);
                     answer1.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
                 }
+                if (answer1.getText() != mAnswer){
+                    answer1.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_mauvaise_reponse));
+                }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
                     gameisover();
@@ -102,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     answer2.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
+                }
+                if (answer2.getText() != mAnswer){
+                    answer2.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_mauvaise_reponse));
                 }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
@@ -136,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
                     score.setText("Score: " + mScore);
                     answer3.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
                 }
+                if (answer3.getText() != mAnswer){
+                    answer3.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_mauvaise_reponse));
+                }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
                     gameisover();
@@ -168,6 +177,9 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                     answer4.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
+                }
+                if (answer4.getText() != mAnswer){
+                    answer4.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_mauvaise_reponse));
                 }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
