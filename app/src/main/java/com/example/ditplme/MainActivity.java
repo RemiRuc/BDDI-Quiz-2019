@@ -147,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
         mAnswer = mQuestion.getCorrectAnswer(i);
     }
 
+
     private void updateCurrentQuestionDev(int i) {
         question.setText(questionsDev.getQuestion(i));
 
