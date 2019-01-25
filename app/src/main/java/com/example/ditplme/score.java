@@ -54,5 +54,14 @@ public class score extends AppCompatActivity {
             commentaire.setText("phrase 4");
         }
 
+        Button retour = (Button) findViewById(R.id.return_button);
+
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(score.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
     }
 }
