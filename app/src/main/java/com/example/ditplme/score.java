@@ -1,6 +1,7 @@
 package com.example.ditplme;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,13 +11,25 @@ import android.widget.TextView;
 public class score extends AppCompatActivity {
 
     public static int recupResultat;
+    SharedPreferences sharedPreferences;
 
-    TextView note, commentaire;
+    TextView note, commentaire, testname, testMail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
+
+        sharedPreferences = getBaseContext().getSharedPreferences("PREFS", MODE_PRIVATE);
+        String name = sharedPreferences.getString("PREFS_NAME", "inconnu");
+        String mail = sharedPreferences.getString("PREFS_MAIL",null);
+
+        testname = (TextView) findViewById(R.id.testName);
+        testMail = (TextView) findViewById(R.id.testMail);
+
+        testname.setText(name);
+        testMail.setText(mail);
+
 
         note = (TextView) findViewById(R.id.note);
 

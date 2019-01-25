@@ -88,4 +88,24 @@
         app:layout_constraintTop_toBottomOf="@+id/topbar"
         app:srcCompat="@drawable/rond" />
 
+    <TextView
+        android:id="@+id/testName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textColor="#a5a5a5"
+        app:layout_constraintTop_toBottomOf="@+id/topbar" />
+
+    <TextView
+        android:id="@+id/testMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:textColor="#a5a5a5"
+        app:layout_constraintTop_toBottomOf="@+id/testName" />
+
 </android.support.constraint.ConstraintLayout>
