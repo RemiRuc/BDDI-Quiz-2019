@@ -21,7 +21,7 @@ public interface RetrofitInterface {
     Call<SubscriptionResponse> createPlayer(
             @Query(value = "pseudo", encoded = true) String pseudo,
             @Query(value = "mail", encoded = true) String mail,
-            @Query(value = "score", encoded = true) int score,
+            @Query(value = "Score", encoded = true) int score,
             @Query(value = "situation", encoded = true) int situation);
 
 }
