@@ -53,6 +53,12 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return pseudo + " à fait " + score + "points";
+        String sit = "";
+        if (situation == 0){
+            sit = "développeur";
+        } else {
+            sit = "graphiste";
+        }
+        return "Le " + sit + " " + pseudo + " à fait " + score + " points";
     }
 }
