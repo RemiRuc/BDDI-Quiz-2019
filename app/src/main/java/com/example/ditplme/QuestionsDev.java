@@ -7,9 +7,11 @@ public class QuestionsDev {
             "Quelle techno maîtrise-tu le plus ?",
             "Pour faire de la 3D, tu préfére utiliser...",
             "A quoi sert la carte blanche au Uno ?",
+            "Que fais-tu si David te dis de ne pas manger en salle ?",
             "Parmi ces 4 propositions, qui n'est pas développeur ?",
             "Combien coûte un poulet Franprix ?",
             "Quelle est l'une des conditions pour passer au niveau supérieur de rémunération ?",
+            "Où est An ?",
             "Combien es-tu prêt à payer Thierry pour obtenir ton diplôme ?",
     };
 
@@ -26,7 +28,7 @@ public class QuestionsDev {
     };
 
     private String mCorrectAnswer[] = {
-            "Symfony","Objective C","Three JS","Je ne sais pas jouer au Uno","Remy","25,582 Francs","Avoir plus de 21 ans","Je préfére travailler dur"
+            "Symfony","Objective C","Three JS","Je ne sais pas jouer au Uno","Je ferme la salle","Remy","25,582 Francs","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
     };
 
     public String getQuestion(int a) {

@@ -7,9 +7,11 @@ public class Question {
             "Quel logiciel maîtrise-tu le plus ?",
             "Pour faire de la 3D, tu préfére utiliser...",
             "A quoi sert la carte blanche au Uno ?",
+            "Que fais-tu si David te dis de ne pas manger en salle ?",
             "Parmi ces 4 propositions, qui n'est pas développeur ?",
             "Combien coûte un poulet Franprix ?",
             "Quelle est l'une des conditions pour passer au niveau supérieur de rémunération ?",
+            "Où est An ?",
             "Combien es-tu prêt à payer Thierry pour obtenir ton diplôme ?",
     };
 
@@ -19,14 +21,16 @@ public class Question {
             {"Paint","Movie Maker","Photofiltre","J'achète des visuels sur les banques d'images"},
             {"Cinema 4D","Cinema 3D","Remy 3D","Des legos"},
             {"À rien","À faire chier deux autres personnes","À trouver son chemin","Je ne sais pas jouer au Uno"},
+            {"Je continue de manger", "Je ferme la salle", "Je sors dans le froid", "Je jeûne"},
             {"Remi","Remy","Remy","Remy"},
-            {"8,90 Francs","25,582 Francs","Je préfére le McDo","Demandez à Damien"},
+            {"C'est gratuit","25,582 Francs","Je préfére le McDo","Demandez à Damien"},
             {"Avoir plus de 21 ans","Être développeur","Ne pas payer la CVEC","S'appeler Mathias"},
+            {"Elle est déjà passé en Master", "Au bar", "Elle n'a pas payé la CVEC", "C'est qui ?"},
             {"Entre 0 et 3 centimes","Je préfére travailler dur","J'ai déjà payé la CVEC","On ne paie pas Tyty"},
     };
 
     private String mCorrectAnswer[] = {
-            "HTML/CSS","Paint","Cinema 4D","Je ne sais pas jouer au Uno","Remy","25,582 Francs","Avoir plus de 21 ans","Je préfére travailler dur"
+            "HTML/CSS","Paint","Cinema 4D","Je ne sais pas jouer au Uno","Je ferme la salle","Remy","Demandez à Damien","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
     };
 
     public String getQuestion(int a) {
