@@ -63,7 +63,7 @@ public class Score extends AppCompatActivity {
             commentaire.setText("phrase 4");
         }
 
-        Call<SubscriptionResponse> call = ApiUtil.getServiceClass().createPlayer("Yo", "f@n", 9, 1);
+        Call<SubscriptionResponse> call = ApiUtil.getServiceClass().createPlayer(name, mail, recupResultat, Integer.parseInt(category));
         call.enqueue(new Callback<SubscriptionResponse>() {
 
             @Override

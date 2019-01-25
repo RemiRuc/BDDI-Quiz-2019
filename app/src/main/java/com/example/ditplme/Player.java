@@ -12,9 +12,12 @@ public class Player implements Serializable {
     @SerializedName("mail")
     @Expose
     private String mail;
-    @SerializedName("Score")
+    @SerializedName("score")
     @Expose
     private int score;
+    @SerializedName("situation")
+    @Expose
+    private int situation;
 
     public String getPseudo() {
         return pseudo;
@@ -38,6 +41,14 @@ public class Player implements Serializable {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public int getSituation() {
+        return situation;
+    }
+
+    public void setSituation(int situation) {
+        this.situation = situation;
     }
 
     @Override
