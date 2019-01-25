@@ -30,7 +30,7 @@ public class Question {
     };
 
     private String mCorrectAnswer[] = {
-            "HTML/CSS","Paint","Cinema 4D","Je ne sais pas jouer au Uno","Je ferme la salle","Remy","Demandez à Damien","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
+            "HTML/CSS","Paint","Cinema 4D","Je ne sais pas jouer au Uno","Je continue de manger","Remy","Demandez à Damien","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
     };
 
     public String getQuestion(int a) {

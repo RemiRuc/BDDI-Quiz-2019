@@ -30,7 +30,7 @@ public class QuestionsDev {
     };
 
     private String mCorrectAnswer[] = {
-            "Symfony","Jquery","Three JS","Je ne sais pas jouer au Uno","Je ferme la salle","Remy","25,582 Francs","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
+            "Symfony","Jquery","Three JS","Je ne sais pas jouer au Uno","Je continue de manger","Remy","25,582 Francs","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
     };
 
     public String getQuestion(int a) {
