@@ -28,7 +28,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".score"
+            android:name=".Score"
             android:screenOrientation="portrait" />
     </application>
 

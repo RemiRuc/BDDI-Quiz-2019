@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ditplme.retro.ApiUtil;
@@ -14,19 +12,19 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class score extends AppCompatActivity {
+public class Score extends AppCompatActivity {
 
     public static int recupResultat;
 
     TextView note;
 
-    private final String TAG = "";
+    private final String TAG = Score.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
-
+        Log.d(TAG, "onCreate !");
         note = (TextView) findViewById(R.id.note);
 
         Bundle bundle = getIntent().getExtras();
@@ -50,12 +48,12 @@ public class score extends AppCompatActivity {
 
                     }
 
-                    Intent intentSndActivity = new Intent(score.this, MainMenu.class); // Intent explicite je lui dis exactement où il doit aller
+                    Intent intentSndActivity = new Intent(Score.this, MainMenu.class); // Intent explicite je lui dis exactement où il doit aller
                     startActivity(intentSndActivity); // Lance le deuxième interface
 
                 } else {
                     Log.e(TAG, "erreur http : " + response.code());
-                    Intent intentSndActivity = new Intent(score.this, MainMenu.class); // Intent explicite je lui dis exactement où il doit aller
+                    Intent intentSndActivity = new Intent(Score.this, MainMenu.class); // Intent explicite je lui dis exactement où il doit aller
                     startActivity(intentSndActivity); // Lance le deuxième interface
                 }
             }
@@ -65,5 +63,22 @@ public class score extends AppCompatActivity {
                 Log.e(TAG, "bug !" + t);
             }
         });
+
+        //JE LIS LES DONNEES
+
+        /*ApiUtil.getServiceClass().getAllPlayers().enqueue(new Callback<List<Player>>() {
+            @Override
+            public void onResponse(Call<List<Player>> call, Response<List<Player>> response) {
+                if(response.isSuccessful()){
+                    List<Player> postList = response.body();
+                    Log.d(TAG, ""+response.body());
+                }
+            }
+            @Override
+            public void onFailure(Call<List<Player>> call, Throwable t) {
+                //showErrorMessage();
+                Log.d(TAG, "error loading from API" + t.getCause());
+            }
+        });*/
     }
 }

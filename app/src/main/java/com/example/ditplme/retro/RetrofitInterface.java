@@ -14,7 +14,7 @@ import retrofit2.http.Query;
 
 public interface RetrofitInterface {
 
-    @GET("bdd.json")
+    @GET("read.php")
     public Call<List<Player>> getAllPlayers();
 
     @PUT("add.php")
