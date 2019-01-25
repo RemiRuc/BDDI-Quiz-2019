@@ -32,6 +32,7 @@ public class ScoreList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_list);
 
+
         pseudos = new ArrayList<>();
         //JE LIS LES DONNEES
 
