@@ -51,16 +51,16 @@ public class Score extends AppCompatActivity {
 
         if (recupResultat <= 3) {
             commentaire = (TextView) findViewById(R.id.commentaire);
-            commentaire.setText("phrase 1");
+            commentaire.setText("Désolé, t'es vraiment nul");
         } if (recupResultat > 3 && recupResultat <= 5) {
             commentaire = (TextView) findViewById(R.id.commentaire);
-            commentaire.setText("Après avoir évalué tes réponses, nous sommes dans le regret de t’annoncer que tu n’es pas en mesure d’obtenir ton diplôme.\n Cependant, nous pensons que tu es fait pour exercer le métier de boulanger...");
+            commentaire.setText("Nous sommes dans le regret de t’annoncer que tu n’es pas en mesure d’obtenir ton diplôme.\n Cependant, nous pensons que tu es fait pour exercer le métier de boulanger...");
         } if (recupResultat > 5 && recupResultat <= 7) {
             commentaire = (TextView) findViewById(R.id.commentaire);
-            commentaire.setText("phrase 3");
+            commentaire.setText("Pas mal !");
         } if (recupResultat > 7) {
             commentaire = (TextView) findViewById(R.id.commentaire);
-            commentaire.setText("phrase 4");
+            commentaire.setText("Bravo ! Plus besoin de venir en cours, tu peux déjà avoir ton diplôme");
         }
 
         Call<SubscriptionResponse> call = ApiUtil.getServiceClass().createPlayer(name, mail, recupResultat, Integer.parseInt(category));
