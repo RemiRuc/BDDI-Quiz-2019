@@ -62,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
+
+
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer1.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestion(actualQuestion);
+                                    updateCurrentQuestionDev(actualQuestion);
                                 }
                             },
                             700);
@@ -90,13 +93,17 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer1.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestionDev(actualQuestion);
+                                    updateCurrentQuestion(actualQuestion);
                                 }
                             },
                             700);
                 }
             }
         });
+
+
+
+
 
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer2.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestion(actualQuestion);
+                                    updateCurrentQuestionDev(actualQuestion);
                                 }
                             },
                             700);
@@ -126,13 +133,17 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer2.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestionDev(actualQuestion);
+                                    updateCurrentQuestion(actualQuestion);
                                 }
                             },
                             700);
                 }
             }
         });
+
+
+
+
 
         answer3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer3.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestion(actualQuestion);
+                                    updateCurrentQuestionDev(actualQuestion);
                                 }
                             },
                             700);
@@ -162,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer3.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestionDev(actualQuestion);
+                                    updateCurrentQuestion(actualQuestion);
                                 }
                             },
                             700);
@@ -189,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer4.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestion(actualQuestion);
+                                    updateCurrentQuestionDev(actualQuestion);
                                 }
                             },
                             700);
@@ -198,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
                             new Runnable() {
                                 public void run() {
                                     answer4.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
-                                    updateCurrentQuestionDev(actualQuestion);
+                                    updateCurrentQuestion(actualQuestion);
                                 }
                             },
                             700);
