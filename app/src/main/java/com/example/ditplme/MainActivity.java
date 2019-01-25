@@ -3,6 +3,7 @@ package com.example.ditplme;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -71,9 +72,21 @@ public class MainActivity extends AppCompatActivity {
                 if (actualQuestion == thisQuestionsLength) {
                     gameisover();
                 } else if (selectedCategory == 0){
-                    updateCurrentQuestionDev(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestion(actualQuestion);
+                                }
+                            },
+                            700);
                 } else if (selectedCategory == 1) {
-                    updateCurrentQuestion(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestionDev(actualQuestion);
+                                }
+                            },
+                            700);
                 }
             }
         });
@@ -89,9 +102,21 @@ public class MainActivity extends AppCompatActivity {
                 if (actualQuestion == thisQuestionsLength) {
                     gameisover();
                 } else if (selectedCategory == 0){
-                    updateCurrentQuestionDev(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestion(actualQuestion);
+                                }
+                            },
+                            700);
                 } else if (selectedCategory == 1) {
-                    updateCurrentQuestion(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestionDev(actualQuestion);
+                                }
+                            },
+                            700);
                 }
             }
         });
@@ -107,9 +132,21 @@ public class MainActivity extends AppCompatActivity {
                 if (actualQuestion == thisQuestionsLength) {
                     gameisover();
                 } else if (selectedCategory == 0){
-                    updateCurrentQuestionDev(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestion(actualQuestion);
+                                }
+                            },
+                            700);
                 } else if (selectedCategory == 1) {
-                    updateCurrentQuestion(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestionDev(actualQuestion);
+                                }
+                            },
+                            700);
                 }
             }
         });
@@ -125,9 +162,21 @@ public class MainActivity extends AppCompatActivity {
                 if (actualQuestion == thisQuestionsLength) {
                     gameisover();
                 } else if (selectedCategory == 0){
-                    updateCurrentQuestionDev(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestion(actualQuestion);
+                                }
+                            },
+                            700);
                 } else if (selectedCategory == 1) {
-                    updateCurrentQuestion(actualQuestion);
+                    new android.os.Handler().postDelayed(
+                            new Runnable() {
+                                public void run() {
+                                    updateCurrentQuestionDev(actualQuestion);
+                                }
+                            },
+                            700);
                 }
             }
         });
