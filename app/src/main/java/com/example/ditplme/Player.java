@@ -12,7 +12,7 @@ public class Player implements Serializable {
     @SerializedName("mail")
     @Expose
     private String mail;
-    @SerializedName("score")
+    @SerializedName("Score")
     @Expose
     private int score;
 

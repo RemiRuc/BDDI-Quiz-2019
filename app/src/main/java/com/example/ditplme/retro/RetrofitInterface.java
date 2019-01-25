@@ -18,6 +18,10 @@ public interface RetrofitInterface {
     public Call<List<Player>> getAllPlayers();
 
     @PUT("add.php")
-    Call<SubscriptionResponse> createPlayer(@Query(value = "pseudo", encoded = true) String pseudo, @Query(value = "mdp", encoded = true) String mdp);
+    Call<SubscriptionResponse> createPlayer(
+            @Query(value = "pseudo", encoded = true) String pseudo,
+            @Query(value = "mail", encoded = true) String mail,
+            @Query(value = "score", encoded = true) int score,
+            @Query(value = "situation", encoded = true) int situation);
 
 }
