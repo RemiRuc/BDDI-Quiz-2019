@@ -95,9 +95,9 @@ public class Score extends AppCompatActivity {
             }
         });
 
-        Button retour = (Button) findViewById(R.id.return_button);
+        Button continuer = (Button) findViewById(R.id.continuer);
 
-        retour.setOnClickListener(new View.OnClickListener() {
+        continuer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Score.this, ScoreList.class);

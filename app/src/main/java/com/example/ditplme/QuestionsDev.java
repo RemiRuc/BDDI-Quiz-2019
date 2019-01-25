@@ -21,14 +21,16 @@ public class QuestionsDev {
             {"Jquery","Flash","Objective C","WordPress"},
             {"Three JS","Babylon JS","Remy 3D","Des legos"},
             {"À rien","À faire chier deux autres personnes","À trouver son chemin","Je ne sais pas jouer au Uno"},
+            {"Je continue de manger", "Je ferme la salle", "Je sors dans le froid", "Je jeûne"},
             {"Remi","Remy","Remy","Remy"},
             {"8,90 Francs","25,582 Francs","Je préfére le McDo","Demandez à Damien"},
             {"Avoir plus de 21 ans","Être développeur","Ne pas payer la CVEC","S'appeler Mathias"},
+            {"Elle est déjà passé en Master", "Au bar", "Elle n'a pas payé la CVEC", "C'est qui ?"},
             {"Entre 0 et 3 centimes","Je préfére travailler dur","J'ai déjà payé la CVEC","On ne paie pas Tyty"},
     };
 
     private String mCorrectAnswer[] = {
-            "Symfony","Objective C","Three JS","Je ne sais pas jouer au Uno","Je ferme la salle","Remy","25,582 Francs","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
+            "Symfony","Jquery","Three JS","Je ne sais pas jouer au Uno","Je ferme la salle","Remy","25,582 Francs","Avoir plus de 21 ans","Au bar","Je préfére travailler dur"
     };
 
     public String getQuestion(int a) {
