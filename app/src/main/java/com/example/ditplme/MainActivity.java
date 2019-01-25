@@ -1,6 +1,7 @@
 package com.example.ditplme;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 if (answer1.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
+                    answer1.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
                 }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer1.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestion(actualQuestion);
                                 }
                             },
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer1.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestionDev(actualQuestion);
                                 }
                             },
@@ -97,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 if (answer2.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
+                    answer2.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
                 }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
@@ -105,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer2.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestion(actualQuestion);
                                 }
                             },
@@ -113,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer2.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestionDev(actualQuestion);
                                 }
                             },
@@ -127,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 if (answer3.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
+                    answer3.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
                 }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
@@ -135,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer3.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestion(actualQuestion);
                                 }
                             },
@@ -143,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer3.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestionDev(actualQuestion);
                                 }
                             },
@@ -157,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 if (answer4.getText() == mAnswer){
                     mScore++;
                     score.setText("Score: " + mScore);
+                    answer4.setBackgroundDrawable(getResources().getDrawable(R.drawable.button_bonne_reponse));
                 }
                 actualQuestion++;
                 if (actualQuestion == thisQuestionsLength) {
@@ -165,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer4.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestion(actualQuestion);
                                 }
                             },
@@ -173,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                     new android.os.Handler().postDelayed(
                             new Runnable() {
                                 public void run() {
+                                    answer4.setBackgroundDrawable(getResources().getDrawable(R.drawable.button));
                                     updateCurrentQuestionDev(actualQuestion);
                                 }
                             },

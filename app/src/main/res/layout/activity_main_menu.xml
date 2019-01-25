@@ -62,6 +62,7 @@
         android:layout_marginBottom="40dp"
         android:drawableLeft="@drawable/mail"
         android:drawablePadding="10dip"
+        android:autoLink="email"
         android:padding="10dp"/>
 
     <Button
