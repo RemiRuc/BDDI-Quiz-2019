@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.example.ditplme.retro.ApiUtil;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -23,7 +24,7 @@ public class ScoreList extends AppCompatActivity {
 
     ListView mListView;
 
-    private String[] pseudos;
+    private ArrayList<String> pseudos;
     private int[] scores;
 
     @Override
@@ -31,6 +32,7 @@ public class ScoreList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_list);
 
+        pseudos = new ArrayList<>();
         //JE LIS LES DONNEES
 
         ApiUtil.getServiceClass().getAllPlayers().enqueue(new Callback<List<Player>>() {
@@ -42,8 +44,10 @@ public class ScoreList extends AppCompatActivity {
 
                     for(int i = 0; i < response.body().size()  ; i++) {
 
-                        pseudos[i] = response.body().get(i).getPseudo();
-                        scores[i] = response.body().get(i).getScore();
+                        Log.d(TAG, "OBJECT  : "+response.body().get(i));
+
+                         pseudos.add(response.body().get(i).toString());
+                        //scores[i] = response.body().get(i).getScore();
                     }
 
 

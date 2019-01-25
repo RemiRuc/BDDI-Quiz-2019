@@ -53,6 +53,6 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "Player : " + pseudo;
+        return pseudo + " à fait " + score + "points";
     }
 }
