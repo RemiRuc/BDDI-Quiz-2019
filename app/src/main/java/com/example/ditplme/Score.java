@@ -95,29 +95,12 @@ public class Score extends AppCompatActivity {
             }
         });
 
-        //JE LIS LES DONNEES
-
-        /*ApiUtil.getServiceClass().getAllPlayers().enqueue(new Callback<List<Player>>() {
-            @Override
-            public void onResponse(Call<List<Player>> call, Response<List<Player>> response) {
-                if(response.isSuccessful()){
-                    List<Player> postList = response.body();
-                    Log.d(TAG, ""+response.body());
-                }
-            }
-            @Override
-            public void onFailure(Call<List<Player>> call, Throwable t) {
-                //showErrorMessage();
-                Log.d(TAG, "error loading from API" + t.getCause());
-            }
-        });*/
-
         Button retour = (Button) findViewById(R.id.return_button);
 
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Score.this, MainMenu.class);
+                Intent intent = new Intent(Score.this, ScoreList.class);
                 startActivity(intent);
             }
         });
